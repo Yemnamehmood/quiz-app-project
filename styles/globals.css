@@ -2,20 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* styles/global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  background-image: url('/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg'); /* Replace with your own image link */
+  background-size: cover;
+  background-position: center;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.quiz-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer-btn {
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.answer-btn:hover {
+  background-color: #666;
+}
+
+.answer-btn:active {
+  background-color: #888;
+}
+
+footer {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  color: #bbb;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .answer-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .quiz-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .answer-btn {
+    font-size: 0.8rem;
+    padding: 7px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
 }
